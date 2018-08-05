@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+		"A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "mt:ingot_obsidian"
+        }
+    },
+    
+    "result":
+    {
+        "item": "mt:helmet_obsidian"
+    }
+}

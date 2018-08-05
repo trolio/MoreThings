@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A A",
+		"AAA",
+		"AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "mt:ingot_obsidian"
+        }
+    },
+    
+    "result":
+    {
+        "item": "mt:chestplate_obsidian"
+    }
+}

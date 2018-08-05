@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:emerald"
+        }
+    },
+    
+    "result":
+    {
+        "item": "mt:nugget_emerald",
+		"count": 9
+    }
+}

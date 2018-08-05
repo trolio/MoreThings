@@ -1,0 +1,41 @@
+item.nugget_diamond.name=Diamond Nugget
+item.ingot_obsidian.name=Obsidian Ingot
+item.nugget_obsidian.name=Obsidian Nugget
+item.nugget_emerald.name=Emerald Nugget
+
+tile.slab_whiteglass_half.name=White Glass Slab
+
+tile.block_copper.name=Copper Block
+
+item.sword_obsidian.name=Obsidian Sword
+item.sword_emerald.name=Emerald Sword
+
+item.pickaxe_obsidian.name=Obsidian Pickaxe
+item.pickaxe_emerald.name=Emerald Pickaxe
+
+item.shovel_obsidian.name=Obsidian Shovel
+item.shovel_emerald.name=Emerald Shovel
+
+item.axe_obsidian.name=Obsidian Axe
+item.axe_emerald.name=Emerald Axe
+
+item.hoe_obsidian.name=Obsidian Hoe
+item.hoe_emerald.name=Emerald Hoe
+
+item.helmet_obsidian.name=Obsidian Helmet
+item.helmet_emerald.name=Emerald Helmet
+
+item.chestplate_obsidian.name=Obsidian Chestplate
+item.chestplate_emerald.name=Emerald Chestplate
+
+item.leggings_obsidian.name=Obsidian Leggings
+item.leggings_emerald.name=Emerald Leggings
+
+item.boots_obsidian.name=Obsidian Boots
+item.boots_emerald.name=Emerald Boots
+
+itemGroup.mt_metals=More Things Metals
+itemGroup.mt_weapons=More Things Weapons
+itemGroup.mt_tools=More Things Tools
+itemGroup.mt_armor=More Things Armor
+itemGroup.mt_blocks=More Things Blocks

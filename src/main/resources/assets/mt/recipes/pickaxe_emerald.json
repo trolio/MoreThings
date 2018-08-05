@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+		" B ",
+		" B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:emerald"
+        },
+		"B":
+		{
+			"item": "minecraft:stick"
+		}
+    },
+    
+    "result":
+    {
+        "item": "mt:pickaxe_emerald"
+    }
+}
