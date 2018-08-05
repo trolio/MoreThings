@@ -10,7 +10,6 @@ import trolio.morethings.init.ModBlocks;
 import trolio.morethings.init.ModItems;
 import trolio.morethings.util.IHasModel;
 
-@EventBusSubscriber
 public class RegistryHandler 
 {
 	public static void Client()

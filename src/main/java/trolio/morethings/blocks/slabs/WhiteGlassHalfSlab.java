@@ -1,4 +1,4 @@
-package trolio.morethings.blocks.WhiteGlass;
+package trolio.morethings.blocks.slabs;
 
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.IBlockState;

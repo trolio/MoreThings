@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "mt:block_tin"
+        }
+    },
+    
+    "result":
+    {
+        "item": "mt:ingot_tin",
+		"count": 9
+    }
+}

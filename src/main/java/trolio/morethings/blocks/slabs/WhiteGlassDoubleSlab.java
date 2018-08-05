@@ -1,4 +1,4 @@
-package trolio.morethings.blocks.WhiteGlass;
+package trolio.morethings.blocks.slabs;
 
 import trolio.morethings.blocks.GlassSlab;
 

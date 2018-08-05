@@ -1,10 +1,10 @@
 {
 	"forge_marker": 1,
 	"defaults": {
-		"model": "mt:block_copper"
+		"model": "mt:block_silver"
 	},
 	"variants": {
-		"normal": [{ "model": "mt:block_copper" }],
+		"normal": [{ "model": "mt:block_silver" }],
 		"inventory": [{}]
 	}
 }

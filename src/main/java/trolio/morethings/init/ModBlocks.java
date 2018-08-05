@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -11,8 +12,10 @@ import net.minecraft.item.ItemSlab;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import trolio.morethings.blocks.CopperBlock;
-import trolio.morethings.blocks.WhiteGlass.WhiteGlassDoubleSlab;
-import trolio.morethings.blocks.WhiteGlass.WhiteGlassHalfSlab;
+import trolio.morethings.blocks.SilverBlock;
+import trolio.morethings.blocks.TinBlock;
+import trolio.morethings.blocks.slabs.WhiteGlassDoubleSlab;
+import trolio.morethings.blocks.slabs.WhiteGlassHalfSlab;
 
 public class ModBlocks 
 {
@@ -23,13 +26,17 @@ public class ModBlocks
 	public static WhiteGlassDoubleSlab slabWhiteGlassDouble;
 	
 	public static Block blockCopper;
+	public static Block blockTin;
+	public static Block blockSilver;
 	
 	public static void init()
 	{
 		slabWhiteGlassHalf = new WhiteGlassHalfSlab("slab_whiteglass_half");
 		slabWhiteGlassDouble = new WhiteGlassDoubleSlab("slab_whiteglass_double");
 		
-		blockCopper = new CopperBlock("block_copper");
+		blockCopper = new CopperBlock("block_copper", Material.IRON);
+		blockTin = new TinBlock ("block_tin", Material.IRON);
+		blockSilver = new SilverBlock("block_silver", Material.IRON);
 	}
 	
 	public static void register()
@@ -37,6 +44,8 @@ public class ModBlocks
 		registerBlock(slabWhiteGlassHalf, new ItemSlab(slabWhiteGlassHalf, slabWhiteGlassHalf, slabWhiteGlassDouble));
 		
 		registerBlock(blockCopper);
+		registerBlock(blockTin);
+		registerBlock(blockSilver);
 	}
 	
 	public static void registerBlock (Block block)

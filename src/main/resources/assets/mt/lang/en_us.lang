@@ -2,10 +2,15 @@ item.nugget_diamond.name=Diamond Nugget
 item.ingot_obsidian.name=Obsidian Ingot
 item.nugget_obsidian.name=Obsidian Nugget
 item.nugget_emerald.name=Emerald Nugget
+item.ingot_copper.name=Copper Ingot
+item.ingot_tin.name=Tin Ingot
+item.ingot_silver.name=Silver Ingot
 
 tile.slab_whiteglass_half.name=White Glass Slab
 
 tile.block_copper.name=Copper Block
+tile.block_tin.name=Tin Block
+tile.block_silver.name=Silver Block
 
 item.sword_obsidian.name=Obsidian Sword
 item.sword_emerald.name=Emerald Sword

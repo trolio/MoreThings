@@ -10,6 +10,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import trolio.morethings.items.DiamondNugget;
+import trolio.morethings.items.copper.CopperIngot;
 import trolio.morethings.items.emerald.EmeraldArmor;
 import trolio.morethings.items.emerald.EmeraldAxe;
 import trolio.morethings.items.emerald.EmeraldHoe;
@@ -25,6 +26,8 @@ import trolio.morethings.items.obsidian.ObsidianNugget;
 import trolio.morethings.items.obsidian.ObsidianPickaxe;
 import trolio.morethings.items.obsidian.ObsidianShovel;
 import trolio.morethings.items.obsidian.ObsidianSword;
+import trolio.morethings.items.silver.SilverIngot;
+import trolio.morethings.items.tin.TinIngot;
 import trolio.morethings.util.Reference;
 
 public class ModItems 
@@ -34,6 +37,9 @@ public class ModItems
 	public static Item ingotObsidian;
 	public static Item nuggetObsidian;
 	public static Item nuggetEmerald;
+	public static Item ingotCopper;
+	public static Item ingotTin;
+	public static Item ingotSilver;
 	
 	//weapons
 	public static Item swordObsidian;
@@ -75,6 +81,9 @@ public class ModItems
 		ingotObsidian = new ObsidianIngot("ingot_obsidian");
 		nuggetObsidian = new ObsidianNugget("nugget_obsidian");
 		nuggetEmerald = new EmeraldNugget("nugget_emerald");
+		ingotCopper = new CopperIngot("ingot_copper");
+		ingotTin = new TinIngot("ingot_tin");
+		ingotSilver = new SilverIngot("ingot_silver");
 		
 		swordObsidian = new ObsidianSword("sword_obsidian", toolObsidian);
 		swordEmerald = new EmeraldSword("sword_emerald", toolEmerald);
@@ -125,6 +134,9 @@ public class ModItems
 		registerItem(chestplateEmerald);
 		registerItem(leggingsEmerald);
 		registerItem(bootsEmerald);
+		registerItem(ingotCopper);
+		registerItem(ingotTin);
+		registerItem(ingotSilver);
 	}
 	
 	public static void registerItem (Item item)

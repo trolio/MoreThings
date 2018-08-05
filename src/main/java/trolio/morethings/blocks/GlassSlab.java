@@ -32,6 +32,7 @@ public abstract class GlassSlab extends BlockSlab
 		setRegistryName(name);
 		setCreativeTab(CreativeTabHandler.tabBlocks);
 		
+		
 		IBlockState state = this.blockState.getBaseState();
 		
 		if (!this.isDouble())
@@ -51,6 +52,18 @@ public abstract class GlassSlab extends BlockSlab
 	public boolean shouldSideBeRendered (IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
 	{
 		return true;
+	}
+	
+	@Override
+	public boolean doesSideBlockRendering (IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing face)
+	{
+		return false;
+	}
+	
+	@Override
+	public int getLightOpacity (IBlockState state)
+	{
+		return 0;
 	}
 	
 	@Override

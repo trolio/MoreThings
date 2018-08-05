@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+		"AAA",
+		"AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "mt:ingot_tin"
+        }
+    },
+    
+    "result":
+    {
+        "item": "mt:block_tin"
+    }
+}
