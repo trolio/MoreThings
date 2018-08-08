@@ -19,9 +19,10 @@ import trolio.morethings.util.handlers.CreativeTabHandler;
 import trolio.morethings.util.handlers.EnumHandler;
 import trolio.morethings.util.handlers.EnumHandler.OreType;
 
-public class CopperOre extends Block implements IMetaBlockName
+public class CopperOre extends Block
 {
 	public static final PropertyEnum TYPE = PropertyEnum.create("type", OreType.class);
+	
 	public CopperOre (String name, Material material)
 	{
 		super(material);
@@ -61,11 +62,5 @@ public class CopperOre extends Block implements IMetaBlockName
 	public IBlockState getStateFromMeta(int meta) 
 	{
 		return this.getDefaultState().withProperty(TYPE, OreType.values()[meta]);
-	}
-	
-	@Override
-	public String getSpecialName(ItemStack stack) 
-	{
-		return OreType.values()[stack.getItemDamage()].getName();
 	}
 }
