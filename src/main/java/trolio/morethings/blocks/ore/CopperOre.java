@@ -16,6 +16,7 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import trolio.morethings.util.IMetaBlockName;
 import trolio.morethings.util.handlers.CreativeTabHandler;
+import trolio.morethings.util.handlers.EnumHandler;
 import trolio.morethings.util.handlers.EnumHandler.OreType;
 
 public class CopperOre extends Block implements IMetaBlockName
