@@ -10,6 +10,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import trolio.morethings.blocks.ore.CopperOre;
+import trolio.morethings.blocks.ore.SilverOre;
 import trolio.morethings.blocks.ore.TinOre;
 import trolio.morethings.init.ModBlocks;
 import trolio.morethings.util.handlers.EnumHandler.OreType;
@@ -23,6 +24,7 @@ public class OreGen implements IWorldGenerator
 	{
 		copper_overworld = new WorldGenMinable(ModBlocks.oreCopper.getDefaultState().withProperty(CopperOre.TYPE, OreType.OVERWORLD), 8);
 		tin_overworld = new WorldGenMinable(ModBlocks.oreTin.getDefaultState().withProperty(TinOre.TYPE, OreType.OVERWORLD), 8);
+		silver_overworld = new WorldGenMinable(ModBlocks.oreSilver.getDefaultState().withProperty(SilverOre.TYPE, OreType.OVERWORLD), 8);
 	}
 	
 	private void runGenerator (WorldGenerator generator, World world, Random rand, int ChunkX, int ChunkZ, int chancesToSpawn, int minHeight, int maxHeight)
@@ -48,9 +50,11 @@ public class OreGen implements IWorldGenerator
 		switch (world.provider.getDimension())
 		{
 		case 0:
-			this.runGenerator(copper_overworld, world, random, chunkX, chunkZ, 20, 0, 64);
+			runGenerator(copper_overworld, world, random, chunkX, chunkZ, 20, 0, 64);
 		case 1:
-			this.runGenerator(tin_overworld, world, random, chunkX, chunkZ, 20, 0, 64);
+			runGenerator(tin_overworld, world, random, chunkX, chunkZ, 20, 0, 64);
+		case 2:
+			runGenerator(silver_overworld, world, random, chunkX, chunkZ, 20, 0, 64);
 		}
 	}
 }
