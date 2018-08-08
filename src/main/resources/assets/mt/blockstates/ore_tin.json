@@ -1,0 +1,10 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "mt:ore_tin"
+	},
+	"variants": {
+		"normal": [{ "model": "mt:ore_tin" }],
+		"inventory": [{}]
+	}
+}

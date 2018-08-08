@@ -14,6 +14,9 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import trolio.morethings.blocks.CopperBlock;
 import trolio.morethings.blocks.SilverBlock;
 import trolio.morethings.blocks.TinBlock;
+import trolio.morethings.blocks.ore.CopperOre;
+import trolio.morethings.blocks.ore.SilverOre;
+import trolio.morethings.blocks.ore.TinOre;
 import trolio.morethings.blocks.slabs.WhiteGlassDoubleSlab;
 import trolio.morethings.blocks.slabs.WhiteGlassHalfSlab;
 
@@ -28,6 +31,9 @@ public class ModBlocks
 	public static Block blockCopper;
 	public static Block blockTin;
 	public static Block blockSilver;
+	public static Block oreCopper;
+	public static Block oreTin;
+	public static Block oreSilver;
 	
 	public static void init()
 	{
@@ -35,8 +41,11 @@ public class ModBlocks
 		slabWhiteGlassDouble = new WhiteGlassDoubleSlab("slab_whiteglass_double");
 		
 		blockCopper = new CopperBlock("block_copper", Material.IRON);
-		blockTin = new TinBlock ("block_tin", Material.IRON);
+		blockTin = new TinBlock("block_tin", Material.IRON);
 		blockSilver = new SilverBlock("block_silver", Material.IRON);
+		oreCopper = new CopperOre("ore_copper", Material.IRON);
+		oreTin = new TinOre("ore_tin", Material.IRON);
+		oreSilver = new SilverOre("ore_silver", Material.IRON);
 	}
 	
 	public static void register()
@@ -46,6 +55,9 @@ public class ModBlocks
 		registerBlock(blockCopper);
 		registerBlock(blockTin);
 		registerBlock(blockSilver);
+		registerBlock(oreCopper);
+		registerBlock(oreTin);
+		registerBlock(oreSilver);
 	}
 	
 	public static void registerBlock (Block block)
