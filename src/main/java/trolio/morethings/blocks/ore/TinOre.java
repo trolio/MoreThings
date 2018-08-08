@@ -12,7 +12,7 @@ public class TinOre extends Block
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabHandler.tabBlocks);
-		setHardness(20);
-		setResistance(10);
+		setHardness(2);
+		setResistance(2);
 	}
 }

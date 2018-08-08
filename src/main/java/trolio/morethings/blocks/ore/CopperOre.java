@@ -28,6 +28,8 @@ public class CopperOre extends Block implements IMetaBlockName
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabHandler.tabBlocks);
+		setHardness(2);
+		setResistance(2);
 	}
 	
 	@Override
