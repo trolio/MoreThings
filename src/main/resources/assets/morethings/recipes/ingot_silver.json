@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "morethings:block_silver"
+        }
+    },
+    
+    "result":
+    {
+        "item": "morethings:ingot_silver",
+		"count": 9
+    }
+}

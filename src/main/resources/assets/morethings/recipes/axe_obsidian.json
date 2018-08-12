@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " AA",
+		" BA",
+		" B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "morethings:ingot_obsidian"
+        },
+		"B":
+		{
+			"item": "minecraft:stick"
+		}
+    },
+    
+    "result":
+    {
+        "item": "morethings:axe_obsidian"
+    }
+}

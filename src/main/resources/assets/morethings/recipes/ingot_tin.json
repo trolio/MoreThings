@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "morethings:block_tin"
+        }
+    },
+    
+    "result":
+    {
+        "item": "morethings:ingot_tin",
+		"count": 9
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+		"AAA",
+		"AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "morethings:ingot_copper"
+        }
+    },
+    
+    "result":
+    {
+        "item": "morethings:block_copper"
+    }
+}

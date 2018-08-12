@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "half=bottom": { "model": "mt:slab_whiteglass_bottom" },
-        "half=top": { "model": "mt:slab_whiteglass_top" }
-    }
-}

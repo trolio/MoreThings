@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "morethings:slab_whiteglass_bottom" },
+        "half=top": { "model": "morethings:slab_whiteglass_top" }
+    }
+}

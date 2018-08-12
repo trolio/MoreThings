@@ -2,7 +2,7 @@ package trolio.morethings.util;
 
 public class Reference 
 {
-	public static final String MODID = "mt";
+	public static final String MODID = "morethings";
 	public static final String NAME = "More Things";
 	public static final String VERSION = "0.0.1";
 	

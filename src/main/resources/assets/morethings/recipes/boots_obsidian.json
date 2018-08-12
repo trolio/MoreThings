@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A A",
+		"A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "morethings:ingot_obsidian"
+        }
+    },
+    
+    "result":
+    {
+        "item": "morethings:boots_obsidian"
+    }
+}

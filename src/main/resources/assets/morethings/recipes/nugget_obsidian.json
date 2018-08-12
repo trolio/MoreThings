@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "morethings:ingot_obsidian"
+        }
+    },
+    
+    "result":
+    {
+        "item": "morethings:nugget_obsidian",
+        "count": 9
+    }
+}
