@@ -5,6 +5,7 @@ item.nugget_emerald.name=Emerald Nugget
 item.ingot_copper.name=Copper Ingot
 item.ingot_tin.name=Tin Ingot
 item.ingot_silver.name=Silver Ingot
+item.ingot_steel.name= Steel Ingot
 
 tile.slab_whiteglass_half.name=White Glass Slab
 

@@ -5,6 +5,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import trolio.morethings.util.handlers.RecipeHandler;
 import trolio.morethings.util.handlers.RegistryHandler;
 import trolio.morethings.worldgen.OreGen;
 
@@ -18,7 +19,7 @@ public class CommonProxy
 	
 	public void init(FMLInitializationEvent event)
 	{
-		
+		RecipeHandler.registerSmeltingRecipe();
 	}
 	
 	public void postInit(FMLPostInitializationEvent event)

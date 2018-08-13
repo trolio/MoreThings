@@ -27,6 +27,7 @@ import trolio.morethings.items.obsidian.ObsidianPickaxe;
 import trolio.morethings.items.obsidian.ObsidianShovel;
 import trolio.morethings.items.obsidian.ObsidianSword;
 import trolio.morethings.items.silver.SilverIngot;
+import trolio.morethings.items.steel.SteelIngot;
 import trolio.morethings.items.tin.TinIngot;
 import trolio.morethings.util.Reference;
 
@@ -40,6 +41,7 @@ public class ModItems
 	public static Item ingotCopper;
 	public static Item ingotTin;
 	public static Item ingotSilver;
+	public static Item ingotSteel;
 	
 	//weapons
 	public static Item swordObsidian;
@@ -84,6 +86,7 @@ public class ModItems
 		ingotCopper = new CopperIngot("ingot_copper");
 		ingotTin = new TinIngot("ingot_tin");
 		ingotSilver = new SilverIngot("ingot_silver");
+		ingotSteel = new SteelIngot("ingot_steel");
 		
 		swordObsidian = new ObsidianSword("sword_obsidian", toolObsidian);
 		swordEmerald = new EmeraldSword("sword_emerald", toolEmerald);
@@ -137,6 +140,7 @@ public class ModItems
 		registerItem(ingotCopper);
 		registerItem(ingotTin);
 		registerItem(ingotSilver);
+		registerItem(ingotSteel);
 	}
 	
 	public static void registerItem (Item item)
