@@ -30,6 +30,7 @@ import trolio.morethings.items.silver.SilverIngot;
 import trolio.morethings.items.steel.SteelIngot;
 import trolio.morethings.items.tin.TinIngot;
 import trolio.morethings.util.Reference;
+import trolio.morethings.util.handlers.RegistryHandler;
 
 public class ModItems 
 {
@@ -143,9 +144,8 @@ public class ModItems
 		registerItem(ingotSteel);
 	}
 	
-	public static void registerItem (Item item)
+	private static void registerItem (Item item)
 	{
-		ForgeRegistries.ITEMS.register(item);
-		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+		RegistrationHandler.Items.add(item);
 	}
 }

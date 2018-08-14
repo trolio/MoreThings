@@ -43,7 +43,7 @@ public class CreativeTabHandler
 	{
 		public ItemStack getTabIconItem()
 		{
-			return new ItemStack(ModBlocks.slabWhiteGlassDouble);
+			return new ItemStack(ModBlocks.oreCopper);
 		}
 	};
 

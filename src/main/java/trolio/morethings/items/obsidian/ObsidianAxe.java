@@ -10,7 +10,6 @@ import net.minecraft.item.ItemTool;
 import net.minecraft.item.Item.ToolMaterial;
 import trolio.morethings.Main;
 import trolio.morethings.init.ModItems;
-import trolio.morethings.util.IHasModel;
 import trolio.morethings.util.handlers.CreativeTabHandler;
 
 public class ObsidianAxe extends ItemTool

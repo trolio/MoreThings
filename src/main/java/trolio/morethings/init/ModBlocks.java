@@ -5,14 +5,11 @@ import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemSlab;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import trolio.morethings.blocks.CopperBlock;
 import trolio.morethings.blocks.SilverBlock;
+import trolio.morethings.blocks.SteelBlock;
 import trolio.morethings.blocks.TinBlock;
 import trolio.morethings.blocks.ore.CopperOre;
 import trolio.morethings.blocks.ore.SilverOre;
@@ -31,6 +28,8 @@ public class ModBlocks
 	public static Block blockCopper;
 	public static Block blockTin;
 	public static Block blockSilver;
+	public static Block blockSteel;
+	
 	public static Block oreCopper;
 	public static Block oreTin;
 	public static Block oreSilver;
@@ -43,6 +42,8 @@ public class ModBlocks
 		blockCopper = new CopperBlock("block_copper", Material.IRON);
 		blockTin = new TinBlock("block_tin", Material.IRON);
 		blockSilver = new SilverBlock("block_silver", Material.IRON);
+		blockSteel = new SteelBlock ("block_steel", Material.IRON);
+		
 		oreCopper = new CopperOre("ore_copper", Material.IRON);
 		oreTin = new TinOre("ore_tin", Material.IRON);
 		oreSilver = new SilverOre("ore_silver", Material.IRON);
@@ -55,27 +56,30 @@ public class ModBlocks
 		registerBlock(blockCopper);
 		registerBlock(blockTin);
 		registerBlock(blockSilver);
+		registerBlock(blockSteel);
+		
 		registerBlock(oreCopper);
 		registerBlock(oreTin);
 		registerBlock(oreSilver);
 	}
 	
-	public static void registerBlock (Block block)
+	private static void registerBlock (Block block)
 	{
-		ForgeRegistries.BLOCKS.register(block);
-		ItemBlock item = new ItemBlock(block);
-		item.setRegistryName(block.getRegistryName());
-		ForgeRegistries.ITEMS.register(item);
-		
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
+		registerBlock(block, new ItemBlock(block));
 	}
 	
-	public static void registerBlock (Block block, ItemBlock itemblock)
+	private static void registerBlock(Block block, ItemBlock item)
 	{
-		ForgeRegistries.BLOCKS.register(block);
-		itemblock.setRegistryName(block.getRegistryName());
-		ForgeRegistries.ITEMS.register(itemblock);
+		if(block.getRegistryName() == null)
+		{
+			throw new IllegalArgumentException ("A block being registered does not have a registry name and could be successfully registered.");
+		}
+		RegistrationHandler.Blocks.add(block);
 		
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
+		if (item != null)
+		{
+			item.setRegistryName(block.getRegistryName());
+			RegistrationHandler.Items.add(item);
+		}
 	}
 }

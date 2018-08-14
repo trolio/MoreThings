@@ -12,6 +12,8 @@ tile.slab_whiteglass_half.name=White Glass Slab
 tile.block_copper.name=Copper Block
 tile.block_tin.name=Tin Block
 tile.block_silver.name=Silver Block
+tile.block_steel.name=Steel Block
+
 tile.ore_copper.name=Copper Ore
 tile.ore_tin.name=Tin Ore
 tile.ore_silver.name=Silver Ore

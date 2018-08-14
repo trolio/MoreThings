@@ -1,0 +1,10 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "morethings:block_steel"
+	},
+	"variants": {
+		"normal": [{ "model": "morethings:block_steel" }],
+		"inventory": [{}]
+	}
+}

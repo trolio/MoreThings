@@ -11,7 +11,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import trolio.morethings.Main;
 import trolio.morethings.init.ModBlocks;
 import trolio.morethings.init.ModItems;
-import trolio.morethings.util.IHasModel;
 import trolio.morethings.util.handlers.CreativeTabHandler;
 
 public class CopperBlock extends Block

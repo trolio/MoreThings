@@ -5,7 +5,6 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import trolio.morethings.Main;
 import trolio.morethings.init.ModItems;
-import trolio.morethings.util.IHasModel;
 import trolio.morethings.util.handlers.CreativeTabHandler;
 
 public class ObsidianArmor extends ItemArmor

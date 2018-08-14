@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+       "all": "morethings:blocks/block_steel"
+   }
+}
