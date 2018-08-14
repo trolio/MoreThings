@@ -14,7 +14,7 @@ import trolio.morethings.util.handlers.CreativeTabHandler;
 
 public class ObsidianAxe extends ItemTool
 {
-	private static final Set<Block> effectiveOn = Sets.newHashSet(Blocks.OAK_DOOR, Blocks.OAK_FENCE, Blocks.OAK_FENCE_GATE, Blocks.OAK_STAIRS, Blocks.LOG, Blocks.PLANKS, Blocks.CRAFTING_TABLE);
+	private static final Set<Block> effectiveOn = Sets.newHashSet(Blocks.OAK_DOOR, Blocks.OAK_FENCE, Blocks.OAK_FENCE_GATE, Blocks.OAK_STAIRS, Blocks.LOG, Blocks.PLANKS, Blocks.CRAFTING_TABLE, Blocks.CHEST, Blocks.TRAPPED_CHEST);
 	
 	public ObsidianAxe(String name, ToolMaterial material)
 	{

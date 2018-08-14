@@ -18,6 +18,8 @@ tile.ore_copper.name=Copper Ore
 tile.ore_tin.name=Tin Ore
 tile.ore_silver.name=Silver Ore
 
+tile.furnace_combination.name=Combination Furnace
+
 item.sword_obsidian.name=Obsidian Sword
 item.sword_emerald.name=Emerald Sword
 

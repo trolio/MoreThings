@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemSlab;
+import trolio.morethings.blocks.CombinationFurnace;
 import trolio.morethings.blocks.CopperBlock;
 import trolio.morethings.blocks.SilverBlock;
 import trolio.morethings.blocks.SteelBlock;
@@ -34,6 +35,8 @@ public class ModBlocks
 	public static Block oreTin;
 	public static Block oreSilver;
 	
+	public static Block furnaceCombination;
+	
 	public static void init()
 	{
 		slabWhiteGlassHalf = new WhiteGlassHalfSlab("slab_whiteglass_half");
@@ -47,6 +50,8 @@ public class ModBlocks
 		oreCopper = new CopperOre("ore_copper", Material.IRON);
 		oreTin = new TinOre("ore_tin", Material.IRON);
 		oreSilver = new SilverOre("ore_silver", Material.IRON);
+		
+		furnaceCombination = new CombinationFurnace("furnace_combination", Material.IRON);
 	}
 	
 	public static void register()
@@ -61,6 +66,8 @@ public class ModBlocks
 		registerBlock(oreCopper);
 		registerBlock(oreTin);
 		registerBlock(oreSilver);
+		
+		registerBlock(furnaceCombination);
 	}
 	
 	private static void registerBlock (Block block)

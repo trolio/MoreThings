@@ -16,7 +16,7 @@ import trolio.morethings.util.handlers.CreativeTabHandler;
 public class ObsidianShovel extends ItemTool
 {
 	
-	private static final Set<Block> effectiveOn = Sets.newHashSet(Blocks.SAND, Blocks.GRAVEL, Blocks.DIRT, Blocks.GRASS);
+	private static final Set<Block> effectiveOn = Sets.newHashSet(Blocks.SAND, Blocks.GRAVEL, Blocks.DIRT, Blocks.GRASS, Blocks.FARMLAND);
 	
 	public ObsidianShovel(String name, ToolMaterial material)
 	{
