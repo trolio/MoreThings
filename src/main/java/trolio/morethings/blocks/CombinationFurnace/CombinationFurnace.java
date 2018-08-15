@@ -1,4 +1,4 @@
-package trolio.morethings.blocks;
+package trolio.morethings.blocks.CombinationFurnace;
 
 import java.util.Random;
 
@@ -26,7 +26,6 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import trolio.morethings.Main;
-import trolio.morethings.blocks.TileEntity.TileEntityCombinationFurnace;
 import trolio.morethings.init.ModBlocks;
 import trolio.morethings.util.Reference;
 import trolio.morethings.util.handlers.CreativeTabHandler;

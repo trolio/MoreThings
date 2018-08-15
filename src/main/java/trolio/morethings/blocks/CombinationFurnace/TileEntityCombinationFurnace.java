@@ -1,9 +1,18 @@
-package trolio.morethings.blocks.TileEntity;
+package trolio.morethings.blocks.CombinationFurnace;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
@@ -12,9 +21,9 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import trolio.morethings.blocks.CombinationFurnace;
 
 public class TileEntityCombinationFurnace extends TileEntity implements IInventory, ITickable
 {
@@ -236,4 +245,221 @@ public class TileEntityCombinationFurnace extends TileEntity implements IInvento
 		return 200;
 	}
 	
+	private boolean canSmelt()
+	{
+		if (((ItemStack)inventory.get(0)).isEmpty() || ((ItemStack)inventory.get(1)).isEmpty())
+		{
+			return false;
+		}
+		else
+		{
+			ItemStack result = CombinationFurnaceRecipes.getInstance().getCombinationResult((ItemStack)inventory.get(0), (ItemStack)inventory.get(1));
+			
+			if (result.isEmpty())
+			{
+				return false;
+			}
+			else
+			{
+				ItemStack output = (ItemStack)inventory.get(3);
+				
+				if (output.isEmpty())
+				{
+					return true;
+				}
+				
+				if (!output.isItemEqual(result))
+				{
+					return false;
+				}
+				
+				int res = output.getCount() + result.getCount();
+				
+				return res <= getInventoryStackLimit() && res <= output.getMaxStackSize();
+			}
+		}
+	}
+	
+	public void smeltItem()
+	{
+		if (canSmelt())
+		{
+			ItemStack input1 = (ItemStack)inventory.get(0);
+			ItemStack input2 = (ItemStack)inventory.get(1);
+			ItemStack result = CombinationFurnaceRecipes.getInstance().getCombinationResult(input1, input2);
+			ItemStack output = (ItemStack)inventory.get(3);
+			
+			if (output.isEmpty())
+			{
+				inventory.set(3, result.copy());
+			}
+			else if (output.getItem() == result.getItem())
+			{
+				output.grow(result.getCount());
+			}
+		}
+	}
+	
+	public static int getItemBurnTime (ItemStack fuel)
+	{
+		if (fuel.isEmpty())
+		{
+			return 0;
+		}
+		else
+		{
+			Item item = fuel.getItem();
+			
+			if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.AIR)
+			{
+				Block block = Block.getBlockFromItem(item);
+				
+				if (block == Blocks.WOODEN_SLAB)
+				{
+					return 150;
+				}
+				
+				if (block.getDefaultState().getMaterial() == Material.WOOD)
+				{
+					return 300;
+				}
+				
+				if (block == Blocks.COAL_BLOCK)
+				{
+					return 16000;
+				}
+			}
+			
+			if (item instanceof ItemTool && "WOOD".equals(((ItemTool)item).getToolMaterialName()))
+			{
+				return 200;
+			}
+			
+			if (item instanceof ItemSword && "WOOD".equals(((ItemSword)item).getToolMaterialName()))
+			{
+				return 200;
+			}
+			
+			if (item instanceof ItemHoe && "WOOD".equals(((ItemHoe)item).getMaterialName()))
+			{
+				return 200;
+			}
+			
+			if (item == Items.STICK)
+			{
+				return 100;
+			}
+			
+			if (item == Items.COAL)
+			{
+				return 1600;
+			}
+			
+			if (item == Items.LAVA_BUCKET)
+			{
+				return 20000;
+			}
+			
+			if (item == Item.getItemFromBlock(Blocks.SAPLING))
+			{
+				return 100;
+			}
+			
+			if (item == Items.BLAZE_ROD)
+			{
+				return 2400;
+			}
+			
+			return GameRegistry.getFuelValue(fuel);
+		}
+	}
+	
+	public static boolean isItemFuel (ItemStack fuel)
+	{
+		return getItemBurnTime(fuel) > 0;
+	}
+	
+	@Override
+	public boolean isUsableByPlayer (EntityPlayer player)
+	{
+		return world.getTileEntity(this.pos) != this ? false : player.getDistanceSq((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D) <= 64.0D;
+	}
+	
+	@Override
+	public void openInventory (EntityPlayer player) {}
+	
+	@Override
+	public void closeInventory (EntityPlayer player) {}
+	
+	@Override
+	public boolean isItemValidForSlot (int index, ItemStack stack)
+	{
+		if (index == 3)
+		{
+			return false;
+		}
+		else if (index != 2)
+		{
+			return true;
+		}
+		else
+		{
+			return isItemFuel(stack);
+		}
+	}
+	
+	public String getGUIID()
+	{
+		return "morethings:furnace_combination";
+	}
+	
+	@Override
+	public int getField (int id)
+	{
+		switch (id)
+		{
+		case 0:
+			return burnTime;
+		case 1:
+			return currentBurnTime;
+		case 2:
+			return cookTime;
+		case 3:
+			return totalCookTime;
+		default:
+			return 0;
+		}
+	}
+	
+	@Override
+	public void setField (int id, int value)
+	{
+		switch (id)
+		{
+		case 0:
+			burnTime = value;
+			break;
+		case 1:
+			currentBurnTime = value;
+			break;
+		case 2:
+			cookTime = value;
+			break;
+		case 3:
+			totalCookTime = value;
+			break;
+		}
+	}
+	
+	@Override
+	public int getFieldCount()
+	{
+		return 4;
+	}
+	
+	@Override
+	public void clear()
+	{
+		inventory.clear();
+	}
 }
