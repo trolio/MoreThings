@@ -6,8 +6,8 @@
 		"up": "morethings:blocks/furnace_combination_front_off",
 		"down": "morethings:blocks/furnace_combination_front_off",
 		"north": "morethings:blocks/furnace_combination_front_on",
-		"east": "morethings:blocks/furnace_combination_front_side1",
-		"south": "morethings:blocks/furnace_combination_front_side3",
-		"west": "morethings:blocks/furnace_combination_front_side2"
+		"east": "morethings:blocks/furnace_combination_front_side",
+		"south": "morethings:blocks/furnace_combination_front_side",
+		"west": "morethings:blocks/furnace_combination_front_side"
 	}
 }
