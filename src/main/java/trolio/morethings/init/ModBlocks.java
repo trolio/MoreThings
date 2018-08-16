@@ -11,7 +11,7 @@ import trolio.morethings.blocks.CopperBlock;
 import trolio.morethings.blocks.SilverBlock;
 import trolio.morethings.blocks.SteelBlock;
 import trolio.morethings.blocks.TinBlock;
-import trolio.morethings.blocks.CombinationFurnace.CombinationFurnace;
+import trolio.morethings.blocks.machines.BlockSinteringFurnace;
 import trolio.morethings.blocks.ore.CopperOre;
 import trolio.morethings.blocks.ore.SilverOre;
 import trolio.morethings.blocks.ore.TinOre;
@@ -35,7 +35,8 @@ public class ModBlocks
 	public static Block oreTin;
 	public static Block oreSilver;
 	
-	public static Block furnaceCombination;
+	public static Block SINTERING_FURNACE;
+	
 	
 	public static void init()
 	{
@@ -51,7 +52,8 @@ public class ModBlocks
 		oreTin = new TinOre("ore_tin", Material.IRON);
 		oreSilver = new SilverOre("ore_silver", Material.IRON);
 		
-		furnaceCombination = new CombinationFurnace("furnace_combination", Material.IRON);
+		SINTERING_FURNACE = new BlockSinteringFurnace("sintering_furnace");
+
 	}
 	
 	public static void register()
@@ -67,7 +69,8 @@ public class ModBlocks
 		registerBlock(oreTin);
 		registerBlock(oreSilver);
 		
-		registerBlock(furnaceCombination);
+		registerBlock(SINTERING_FURNACE);
+
 	}
 	
 	private static void registerBlock (Block block)

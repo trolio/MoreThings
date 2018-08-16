@@ -9,5 +9,5 @@ public class Reference
 	public static final String CLIENT = "trolio.morethings.proxy.ClientProxy";
 	public static final String SERVER = "trolio.morethings.proxy.CommonProxy";
 	
-	public static final int GUI_CombinationFurnace = 0;
+	public static final int GUI_SINTERING_FURNACE = 0;
 }
