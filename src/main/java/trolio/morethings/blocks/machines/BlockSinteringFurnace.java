@@ -40,6 +40,7 @@ public class BlockSinteringFurnace extends BlockBase implements ITileEntityProvi
 		super(name, Material.IRON);
 		setSoundType(SoundType.METAL);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(BURNING, false));
+		setHardness(2.0F);
 	}
 	
 	@Override

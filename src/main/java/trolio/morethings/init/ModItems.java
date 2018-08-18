@@ -170,6 +170,10 @@ public class ModItems
 		registerItem(ingotSteel);
 		registerItem(swordCopper);
 		registerItem(pickaxeCopper);
+		registerItem(shovelCopper);
+		registerItem(axeCopper);
+		registerItem(hoeCopper);
+		registerItem(nuggetCopper);
 	}
 	
 	private static void registerItem (Item item)
