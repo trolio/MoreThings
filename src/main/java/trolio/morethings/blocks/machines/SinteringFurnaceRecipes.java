@@ -24,7 +24,7 @@ public class SinteringFurnaceRecipes
 	
 	private SinteringFurnaceRecipes() 
 	{
-		addSinteringRecipe(new ItemStack(ModItems.ingotSilver), new ItemStack(ModItems.ingotTin), new ItemStack(ModItems.ingotSteel), 5.0F);
+		addSinteringRecipe(new ItemStack(ModItems.ingotSilver), new ItemStack(ModItems.ingotTin), new ItemStack(ModItems.ingotSteel, 2), 5.0F);
 	}
 
 	

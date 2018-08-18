@@ -1,22 +1,16 @@
 package trolio.morethings.util.handlers;
 
-import java.util.LinkedList;
-import java.util.List;
-
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import trolio.morethings.Main;
 import trolio.morethings.init.ModBlocks;
 import trolio.morethings.init.ModItems;
-import trolio.morethings.util.Reference;
 
 public class RegistryHandler 
 {
 	public static void Client()
 	{
 		RecipeHandler.registerSmeltingRecipe();
+		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
 	}
 	
 	public static void Common()
@@ -26,5 +20,5 @@ public class RegistryHandler
 		
 		ModBlocks.init();
 		ModBlocks.register();
-	}
+	}	
 }

@@ -1,16 +1,19 @@
 package trolio.morethings.init;
 
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import trolio.morethings.items.DiamondNugget;
+import trolio.morethings.items.copper.CopperAxe;
+import trolio.morethings.items.copper.CopperHoe;
 import trolio.morethings.items.copper.CopperIngot;
+import trolio.morethings.items.copper.CopperNugget;
+import trolio.morethings.items.copper.CopperPickaxe;
+import trolio.morethings.items.copper.CopperShovel;
+import trolio.morethings.items.copper.CopperSword;
 import trolio.morethings.items.emerald.EmeraldArmor;
 import trolio.morethings.items.emerald.EmeraldAxe;
 import trolio.morethings.items.emerald.EmeraldHoe;
@@ -27,10 +30,10 @@ import trolio.morethings.items.obsidian.ObsidianPickaxe;
 import trolio.morethings.items.obsidian.ObsidianShovel;
 import trolio.morethings.items.obsidian.ObsidianSword;
 import trolio.morethings.items.silver.SilverIngot;
+import trolio.morethings.items.silver.SilverNugget;
 import trolio.morethings.items.steel.SteelIngot;
 import trolio.morethings.items.tin.TinIngot;
 import trolio.morethings.util.Reference;
-import trolio.morethings.util.handlers.RegistryHandler;
 
 public class ModItems 
 {
@@ -43,10 +46,14 @@ public class ModItems
 	public static Item ingotTin;
 	public static Item ingotSilver;
 	public static Item ingotSteel;
+	public static Item nuggetCopper;
+	public static Item nuggetSilver;
 	
 	//weapons
 	public static Item swordObsidian;
 	public static Item swordEmerald;
+	public static Item swordCopper;
+	public static Item swordSilver;
 	
 	//tools
 	public static Item pickaxeObsidian;
@@ -58,6 +65,16 @@ public class ModItems
 	public static Item shovelEmerald;
 	public static Item axeEmerald;
 	public static Item hoeEmerald;
+	
+	public static Item pickaxeCopper;
+	public static Item shovelCopper;
+	public static Item axeCopper;
+	public static Item hoeCopper;
+	
+	public static Item pickaxeSilver;
+	public static Item shovelSilver;
+	public static Item axeSilver;
+	public static Item hoeSilver;
 	
 	//armor
 	public static Item helmetObsidian;
@@ -73,6 +90,7 @@ public class ModItems
 	//tool materials
 	public static ToolMaterial toolObsidian = EnumHelper.addToolMaterial("tool_obsidian", 3, 3122, 12.0F, 6.0F, 15);
 	public static ToolMaterial toolEmerald = EnumHelper.addToolMaterial("tool_emerald", 3, 2500, 11.0F, 4.0F, 15);
+	public static ToolMaterial toolCopper = EnumHelper.addToolMaterial("tool_copper", 1, 325, 4.0F, 2.0F, 15);
 	
 	//armor materials
 	public static final ArmorMaterial armorObsidian = EnumHelper.addArmorMaterial("armor_obsidian", Reference.MODID + ":obsidian", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);	
@@ -88,9 +106,12 @@ public class ModItems
 		ingotTin = new TinIngot("ingot_tin");
 		ingotSilver = new SilverIngot("ingot_silver");
 		ingotSteel = new SteelIngot("ingot_steel");
+		nuggetCopper = new CopperNugget("nugget_copper");
+		nuggetSilver = new SilverNugget("nugget_silver");
 		
 		swordObsidian = new ObsidianSword("sword_obsidian", toolObsidian);
 		swordEmerald = new EmeraldSword("sword_emerald", toolEmerald);
+		swordCopper = new CopperSword ("sword_copper", toolCopper);
 		
 		pickaxeObsidian = new ObsidianPickaxe("pickaxe_obsidian", toolObsidian);
 		shovelObsidian = new ObsidianShovel("shovel_obsidian", toolObsidian);
@@ -101,6 +122,11 @@ public class ModItems
 		shovelEmerald = new EmeraldShovel("shovel_emerald", toolEmerald);
 		axeEmerald = new EmeraldAxe("axe_emerald", toolEmerald);
 		hoeEmerald = new EmeraldHoe("hoe_emerald", toolEmerald);
+		
+		pickaxeCopper = new CopperPickaxe("pickaxe_copper", toolCopper);
+		shovelCopper = new CopperShovel("shovel_copper", toolCopper);
+		axeCopper = new CopperAxe("axe_copper", toolCopper);
+		hoeCopper = new CopperHoe("hoe_copper", toolCopper);
 		
 		helmetObsidian = new ObsidianArmor("helmet_obsidian", armorObsidian, 1, EntityEquipmentSlot.HEAD);
 		chestplateObsidian = new ObsidianArmor("chestplate_obsidian", armorObsidian, 1, EntityEquipmentSlot.CHEST);
@@ -142,6 +168,8 @@ public class ModItems
 		registerItem(ingotTin);
 		registerItem(ingotSilver);
 		registerItem(ingotSteel);
+		registerItem(swordCopper);
+		registerItem(pickaxeCopper);
 	}
 	
 	private static void registerItem (Item item)

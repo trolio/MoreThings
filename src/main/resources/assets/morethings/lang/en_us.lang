@@ -9,6 +9,8 @@ item.ingot_steel.name= Steel Ingot
 
 tile.slab_whiteglass_half.name=White Glass Slab
 
+tile.sintering_furnace.name=Combination Furnace
+
 tile.block_copper.name=Copper Block
 tile.block_tin.name=Tin Block
 tile.block_silver.name=Silver Block
@@ -20,9 +22,11 @@ tile.ore_silver.name=Silver Ore
 
 item.sword_obsidian.name=Obsidian Sword
 item.sword_emerald.name=Emerald Sword
+item.sword_copper.name=Copper Sword
 
 item.pickaxe_obsidian.name=Obsidian Pickaxe
 item.pickaxe_emerald.name=Emerald Pickaxe
+item.pickaxe_copper.name=Copper Pickaxe
 
 item.shovel_obsidian.name=Obsidian Shovel
 item.shovel_emerald.name=Emerald Shovel
